@@ -1,0 +1,25 @@
+﻿
+@model List<ProductCatalog.Models.Product>
+
+@{
+    ViewBag.Title = "Product Catalog";
+}
+
+<h2>Product Catalog</h2>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>@product.Name</h3>
+
+                    <p>Category: @product.Category</p>
+
+                    <p>Price: ₹@product.Price</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
